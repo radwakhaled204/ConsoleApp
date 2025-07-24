@@ -9,17 +9,22 @@ namespace ConsoleApp
      class Account
      {
         private string name;
-         public string Name
-         {
-            get { return name; }
-            set
-            { 
-                if (!string.IsNullOrEmpty(name))
-                {
-                    name = value;
-                }
-            }
-         }
+
+
+        //Auto-Implement
+        public string Name { get; set; }
+
+        //public string Name
+        //{
+        //   get { return name; }
+        //   set
+        //   { 
+        //       if (!string.IsNullOrEmpty(name))
+        //       {
+        //           name = value;
+        //       }
+        //   }
+        //}
         //public void SetName(string accountName)
         //{
         //    name = accountName;
@@ -30,5 +35,5 @@ namespace ConsoleApp
 
         //}
 
-     }
+    }
 }
