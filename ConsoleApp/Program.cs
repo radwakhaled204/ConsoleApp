@@ -17,12 +17,18 @@ class Program
            // calc.Addition(num1, num2);
            // calc.Comparisons(num1, num2);
 
-            Account account = new Account("Radwa Khaled");
-            Console.WriteLine($"Hello {account.Name}");
-            //Console.WriteLine("Enter Your Name");
-            //string name = Console.ReadLine();
-            //account.Name= name;           
-            //Console.WriteLine($"Hello {account.Name}");
+            Account account = new Account("radwa" , 5);
+
+            Console.WriteLine("Enter Your Name");
+            string userName = Console.ReadLine();
+            account.name = userName;
+            Console.WriteLine($"Hello {account.name}");
+            Console.WriteLine("Enter Your Deposite");
+            decimal userDeposite = decimal.Parse( Console.ReadLine() );
+            account.Deposite(userDeposite);
+            Console.WriteLine($"Your Deposite is {account.Balance}");
+
+    
 
 
         }
