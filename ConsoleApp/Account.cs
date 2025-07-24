@@ -10,10 +10,16 @@ namespace ConsoleApp
      {
         private string name;
          public string Name
-        {
+         {
             get { return name; }
-            set { name = value; }
-        }
+            set
+            { 
+                if (!string.IsNullOrEmpty(name))
+                {
+                    name = value;
+                }
+            }
+         }
         //public void SetName(string accountName)
         //{
         //    name = accountName;
