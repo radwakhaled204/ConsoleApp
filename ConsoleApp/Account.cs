@@ -15,8 +15,28 @@ namespace ConsoleApp
         {
             name = accName;
             balance = accBalance;
-        }    
-        
+        }
+
+        public decimal Balance
+        {
+            get {return balance;}
+            private set 
+            {
+                if (value > 0.0m)
+                {
+                    balance = value;
+                }
+            }
+        }
+        public void Deposite(decimal deposite)
+        {
+            if(deposite > 0.0m)
+            {
+
+                Balance = Balance + deposite;
+
+            }
+        }
 
 
         //Auto-Implement
