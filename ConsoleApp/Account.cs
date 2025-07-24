@@ -9,15 +9,20 @@ namespace ConsoleApp
      class Account
      {
         private string name;
-        public void SetName(string accountName)
+         public string Name
         {
-            name = accountName;
+            get { return name; }
+            set { name = value; }
         }
-        public string GetName()
-        {
-            return name;
+        //public void SetName(string accountName)
+        //{
+        //    name = accountName;
+        //}
+        //public string GetName()
+        //{
+        //    return name;
 
-        }
+        //}
 
      }
 }
