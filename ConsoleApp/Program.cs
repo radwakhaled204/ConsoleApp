@@ -17,12 +17,13 @@ class Program
            // calc.Addition(num1, num2);
            // calc.Comparisons(num1, num2);
 
-            Account account = new Account();
-            Console.WriteLine("Enter Your Name");
-            string name = Console.ReadLine();
-            account.Name= name;           
+            Account account = new Account("Radwa Khaled");
             Console.WriteLine($"Hello {account.Name}");
-            
+            //Console.WriteLine("Enter Your Name");
+            //string name = Console.ReadLine();
+            //account.Name= name;           
+            //Console.WriteLine($"Hello {account.Name}");
+
 
         }
 
