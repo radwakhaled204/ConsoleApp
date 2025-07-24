@@ -8,12 +8,13 @@ class Program
         static void Main(string[] args)
         {
             Student student = new Student("",0);
+            Console.WriteLine("Enter Your Name");
             student.Name = Console.ReadLine();
             Console.WriteLine($"Hello {student.Name}");
             Console.WriteLine("Enter The Avarage");
             student.Avarage = int.Parse(Console.ReadLine());
-            Console.WriteLine("your Grade is Avarage");
-
+            Console.WriteLine($"your Grade is {student.LetterGrade}");
+            
 
             //string name = "Radwa";
             //Console.WriteLine($"Hello {name}");
