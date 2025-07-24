@@ -34,8 +34,8 @@ namespace ConsoleApp
             }
         }
 
-        string LetterGrade
-        {
+        public string LetterGrade
+         {
             get
             {
                 string letterGrade = string.Empty;
