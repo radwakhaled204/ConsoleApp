@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleApp
 {
      class Account
      {
-        private string name;
+        public string Name;
+        public Account(string accName) 
+        {
+            Name = accName;
+        }    
+        
 
 
         //Auto-Implement
-        public string Name { get; set; }
+        //public string Name { get; set; }
 
         //public string Name
         //{
