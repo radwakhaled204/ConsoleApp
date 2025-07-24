@@ -9,10 +9,12 @@ namespace ConsoleApp
 {
      class Account
      {
-        public string Name;
-        public Account(string accName) 
+        public string name;
+        private decimal balance;
+        public Account(string accName , decimal accBalance) 
         {
-            Name = accName;
+            name = accName;
+            balance = accBalance;
         }    
         
 
