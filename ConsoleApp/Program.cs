@@ -20,8 +20,8 @@ class Program
             Account account = new Account();
             Console.WriteLine("Enter Your Name");
             string name = Console.ReadLine();
-            account.SetName(name);           
-            Console.WriteLine($"Hello {account.GetName()}");
+            account.Name= name;           
+            Console.WriteLine($"Hello {account.Name}");
             
 
         }
