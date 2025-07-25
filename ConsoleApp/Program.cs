@@ -10,7 +10,7 @@ class Program
             //Product userProduct = new Product();
             //Console.WriteLine("Enter number");
             //userProduct.product = int.Parse(Console.ReadLine());
-            //Console.WriteLine($"your product is {userProduct.CalProduct()}");
+            //Console.WriteLine($"your product is {userProduct.CalProduct}");
 
 
             //Student student = new Student("",0);
