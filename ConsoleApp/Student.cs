@@ -10,7 +10,7 @@ namespace ConsoleApp
     {
         public string Name { get; set; }
         private int avarage;
-        public Student(string studentName, int studentAvarge)
+        public Student(string studentName , int studentAvarge)
         {
             Name = studentName;
             avarage = studentAvarge;
@@ -34,8 +34,20 @@ namespace ConsoleApp
             }
         }
 
+        public int CalGrade(int garde)
+        {
+            int total = 0;
+            int gradcounter = 1;
+            while(gradcounter <= 10)
+            {
+                total = total + garde;
+                gradcounter++;
+            }
+            return total;
+        }
+
         public string LetterGrade
-         {
+        {
             get
             {
                 string letterGrade = string.Empty;
@@ -61,6 +73,8 @@ namespace ConsoleApp
                 }
                 return letterGrade;
             }
+
+           
 
         }
     }
