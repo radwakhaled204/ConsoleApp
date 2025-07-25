@@ -7,13 +7,19 @@ class Program
     {
         static void Main(string[] args)
         {
-            Student student = new Student("",0);
-            Console.WriteLine("Enter Your Name");
-            student.Name = Console.ReadLine();
-            Console.WriteLine($"Hello {student.Name}");
-            Console.WriteLine("Enter The Avarage");
-            student.Avarage = int.Parse(Console.ReadLine());
-            Console.WriteLine($"your Grade is {student.LetterGrade}");
+            //Product userProduct = new Product();
+            //Console.WriteLine("Enter number");
+            //userProduct.product = int.Parse(Console.ReadLine());
+            //Console.WriteLine($"your product is {userProduct.CalProduct()}");
+
+
+            //Student student = new Student("",0);
+            //Console.WriteLine("Enter Your Name");
+            //student.Name = Console.ReadLine();
+            //Console.WriteLine($"Hello {student.Name}");
+            //Console.WriteLine("Enter The Avarage");
+            //student.Avarage = int.Parse(Console.ReadLine());
+            //Console.WriteLine($"your Grade is {student.LetterGrade}");
             
 
             //string name = "Radwa";
