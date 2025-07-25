@@ -9,6 +9,7 @@ namespace ConsoleApp
     class Student
     {
         public string Name { get; set; }
+        public int Grade;
         private int avarage;
         public Student(string studentName , int studentAvarge)
         {
@@ -34,17 +35,17 @@ namespace ConsoleApp
             }
         }
 
-        public int CalGrade(int garde)
-        {
-            int total = 0;
-            int gradcounter = 1;
-            while(gradcounter <= 10)
-            {
-                total = total + garde;
-                gradcounter++;
-            }
-            return total;
-        }
+        //public int CalGrade(int grade)
+        //{
+        //    int total = 0;
+        //    int gradcounter = 1;
+        //    while(gradcounter <= 10)
+        //    {
+        //        total = total + grade;
+        //        gradcounter++;
+        //    }
+        //    return total;
+        //}
 
         public string LetterGrade
         {
