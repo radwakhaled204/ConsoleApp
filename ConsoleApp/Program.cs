@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Metrics;
 using System.Xml.Linq;
 
 namespace ConsoleApp
@@ -8,16 +9,21 @@ class Program
         static void Main(string[] args)
         {
 
-            decimal principal = 1000;
-            double rate = 0.05;
-            Console.WriteLine("Year Amount on deposit");
-            for ( int year = 1; year <= 10; ++year)
-             {
-                decimal amount = principal * ((decimal)Math.Pow(1.0 + rate, year));
-                Console.WriteLine($"{year,4} {amount,20:C}");
-             }
-
-
+            //decimal principal = 1000;
+            //double rate = 0.05;
+            //Console.WriteLine("Year Amount on deposit");
+            //for ( int year = 1; year <= 10; ++year)
+            //{
+            //    decimal amount = principal * ((decimal)Math.Pow(1.0 + rate, year));
+            //    Console.WriteLine($"{year,4} {amount,20:C}");
+            //}
+            int counter = 1;
+            do
+            {
+                Console.WriteLine($"{counter}");
+                ++counter;
+                
+            }while (counter <=10);
 
 
             //Product userProduct = new Product();
