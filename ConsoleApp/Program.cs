@@ -11,8 +11,12 @@ class Program
 
 
             Random randomNumbers = new Random();
-            int value = randomNumbers.Next(1,200);
-            Console.WriteLine(value);
+            for (int i = 0; i < 7; i++)
+            {
+                int value = randomNumbers.Next(1, 7);
+                Console.WriteLine(value);
+            }
+
 
 
             //decimal principal = 1000;
