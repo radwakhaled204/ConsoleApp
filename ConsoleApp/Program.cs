@@ -10,12 +10,12 @@ class Program
         {
 
 
-            Random randomNumbers = new Random();
-            for (int i = 0; i < 7; i++)
-            {
-                int value = randomNumbers.Next(1, 7);
-                Console.WriteLine(value);
-            }
+            //Random randomNumbers = new Random();
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    int value = randomNumbers.Next(1, 7);
+            //    Console.WriteLine(value);
+            //}
 
 
 
