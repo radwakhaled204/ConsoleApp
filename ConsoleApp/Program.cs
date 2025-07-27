@@ -10,13 +10,18 @@ class Program
         static void Main(string[] args)
         {
             int[] r = new int[10];
-            int[] c = {1 , 8 , 6 , 5 , 7 , 2};
-            
+            int[] c = { 1, 8, 6, 5, 7, 2, 8, 7, 3, 4, };
 
-            Array.Resize(ref r , 12);
-            Console.WriteLine($"{r.Length}");
-            int sum = c[5] + c[1];
-            Console.WriteLine($"{sum}");
+            int total = 0;
+            for (int i = 0; i < c.Length; i++)
+            {
+                total += c[i];
+            }
+            Console.WriteLine($"{total}");
+            //Array.Resize(ref r , 12);
+            //Console.WriteLine($"{r.Length}");
+            //int sum = c[5] + c[1];
+            //Console.WriteLine($"{sum}");
             //Calculation calc = new Calculation();
             //Console.WriteLine("Enter The Number");
             //int num1 = int.Parse(Console.ReadLine());
