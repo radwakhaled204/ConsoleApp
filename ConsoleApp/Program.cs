@@ -9,6 +9,12 @@ class Program
         static void Main(string[] args)
         {
 
+
+            Random randomNumbers = new Random();
+            int value = randomNumbers.Next(1,200);
+            Console.WriteLine(value);
+
+
             //decimal principal = 1000;
             //double rate = 0.05;
             //Console.WriteLine("Year Amount on deposit");
@@ -17,13 +23,13 @@ class Program
             //    decimal amount = principal * ((decimal)Math.Pow(1.0 + rate, year));
             //    Console.WriteLine($"{year,4} {amount,20:C}");
             //}
-            int counter = 1;
-            do
-            {
-                Console.WriteLine($"{counter}");
-                ++counter;
+            //int counter = 1;
+            //do
+            //{
+            //    Console.WriteLine($"{counter}");
+            //    ++counter;
                 
-            }while (counter <=10);
+            //}while (counter <=10);
 
 
             //Product userProduct = new Product();
