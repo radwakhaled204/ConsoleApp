@@ -13,11 +13,18 @@ class Program
             int[] c = { 1, 8, 6, 5, 7, 2, 8, 7, 3, 4, };
 
             int total = 0;
-            for (int i = 0; i < c.Length; i++)
+            //for (int i = 0; i < c.Length; i++)
+            //{
+            //    total += c[i];
+            //}
+            //Console.WriteLine($"{total}");
+           
+            foreach (int num in c)
             {
-                total += c[i];
+                total += num;
             }
             Console.WriteLine($"{total}");
+
             //Array.Resize(ref r , 12);
             //Console.WriteLine($"{r.Length}");
             //int sum = c[5] + c[1];
