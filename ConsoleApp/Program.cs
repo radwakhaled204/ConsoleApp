@@ -9,6 +9,11 @@ class Program
         static void Main(string[] args)
         {
 
+            Calculation calc = new Calculation();
+            Console.WriteLine("Enter The Number");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{calc.Factorial(num1)}");
+            
 
             //Random randomNumbers = new Random();
             //for (int i = 0; i < 7; i++)
@@ -32,7 +37,7 @@ class Program
             //{
             //    Console.WriteLine($"{counter}");
             //    ++counter;
-                
+
             //}while (counter <=10);
 
 
@@ -49,7 +54,7 @@ class Program
             //Console.WriteLine("Enter The Avarage");
             //student.Avarage = int.Parse(Console.ReadLine());
             //Console.WriteLine($"your Grade is {student.LetterGrade}");
-            
+
 
             //string name = "Radwa";
             //Console.WriteLine($"Hello {name}");
