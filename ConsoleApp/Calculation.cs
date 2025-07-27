@@ -8,6 +8,18 @@ namespace ConsoleApp
 {
      class Calculation
      {
+
+        public long Factorial(long num)
+        {
+            if (num <= 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return num * Factorial(num - 1);
+            }
+        }
         public void Addition(int num1 , int num2)
         {
             int sum = num1 + num2;
