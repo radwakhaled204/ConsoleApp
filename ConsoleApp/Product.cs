@@ -10,6 +10,10 @@ namespace ConsoleApp
     {
 
         public int product;
+        public int num { get; set; }
+
+        public bool IsPositive => num > 0;
+        public int Square(int x) => num * num;
         public int CalProduct()
         {
             while(product <= 100 )
