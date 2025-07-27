@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Metrics;
 using System.Xml.Linq;
 
@@ -8,12 +9,19 @@ class Program
     {
         static void Main(string[] args)
         {
-
-            Calculation calc = new Calculation();
-            Console.WriteLine("Enter The Number");
-            int num1 = int.Parse(Console.ReadLine());
-            Console.WriteLine($"{calc.Factorial(num1)}");
+            int[] r = new int[10];
+            int[] c = {1 , 8 , 6 , 5 , 7 , 2};
             
+
+            Array.Resize(ref r , 12);
+            Console.WriteLine($"{r.Length}");
+            int sum = c[5] + c[1];
+            Console.WriteLine($"{sum}");
+            //Calculation calc = new Calculation();
+            //Console.WriteLine("Enter The Number");
+            //int num1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine($"{calc.Factorial(num1)}");
+
 
             //Random randomNumbers = new Random();
             //for (int i = 0; i < 7; i++)
