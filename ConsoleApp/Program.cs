@@ -20,34 +20,66 @@ class Program
             new Employee("Jason", "Blue", 3200M), 
             new Employee("Wendy", "Brown", 4236.4M)};
 
-
-
-            int[] array = new[] { 2, 9, 5, 0, 3, 7, 1, 4, 8, 5};
-            Console.WriteLine("original array" );
-            foreach (var c in array)
+            Console.WriteLine("Original array:"); 
+            foreach (var element in employees)
             {
-                Console.WriteLine($"{c}");  
+                Console.WriteLine(element);
             }
+            var range = from e in employees where (e.MonthlySalary >= 4000M)&&(e.MonthlySalary <= 6000M) select e;
+            Console.WriteLine("\nEmployees earning in the range" + $"{4000:C}-{6000:C} per month:"); 
+            foreach (var element in range)
+            {
+                Console.WriteLine(element);
+            }
+            var nameSorted =
+                    from e in employees orderby e.LastName, e.FirstName select e;
+            if (nameSorted.Any())
+                 { Console.WriteLine(nameSorted.First()); }
+           else
+            {
+                Console.WriteLine("not found");
+            }
+           var lastname=
+            from e in employees select e.LastName;
+            foreach (var element in lastname.Distinct())
+            {
+                Console.WriteLine(element);
+            }
+            var names =
+            from e in employees select new { e.FirstName, e.LastName };
+          
+            Console.WriteLine("\nNames only:"); foreach (var element in names)
+            {
+                Console.WriteLine(element);
+            }
+            Console.WriteLine();
+            // use method Distinct to select unique last names Console.WriteLine("\nUnique employee last names:");
+            //int[] array = new[] { 2, 9, 5, 0, 3, 7, 1, 4, 8, 5};
+            //Console.WriteLine("original array" );
+            //foreach (var c in array)
+            //{
+            //    Console.WriteLine($"{c}");  
+            //}
 
-            var filteredData = from arr in array where arr > 4 select arr;
+            //var filteredData = from arr in array where arr > 4 select arr;
 
-            Console.WriteLine("linqData array > 4");
-            foreach (var c in filteredData)
-            {
-                Console.WriteLine($"{c}");
-            }
-            var sortedData = from arr in array orderby arr descending select arr;
-            Console.WriteLine("sortedData array");
-            foreach (var c in sortedData)
-            {
-                Console.WriteLine($"{c}");
-            }
-            var sortedFilteredData = from arr in filteredData where arr > 4 orderby arr descending select arr;
-            Console.WriteLine("sortedFilteredData array > 4");
-            foreach (var c in sortedFilteredData.Distinct())
-            {
-                Console.WriteLine($"{c}");
-            }
+            //Console.WriteLine("linqData array > 4");
+            //foreach (var c in filteredData)
+            //{
+            //    Console.WriteLine($"{c}");
+            //}
+            //var sortedData = from arr in array orderby arr descending select arr;
+            //Console.WriteLine("sortedData array");
+            //foreach (var c in sortedData)
+            //{
+            //    Console.WriteLine($"{c}");
+            //}
+            //var sortedFilteredData = from arr in filteredData where arr > 4 orderby arr descending select arr;
+            //Console.WriteLine("sortedFilteredData array > 4");
+            //foreach (var c in sortedFilteredData.Distinct())
+            //{
+            //    Console.WriteLine($"{c}");
+            //}
             //int[,] a = { { 1, 2 }, { 3, 4 } };
             //Console.WriteLine(a.Length);
 
