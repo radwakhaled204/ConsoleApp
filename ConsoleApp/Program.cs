@@ -14,15 +14,15 @@ class Program
 
             int[] array = new[] { 2, 9, 5, 0, 3, 7, 1, 4, 8, 5};
             Console.WriteLine("original array" );
-            foreach (var i in array)
+            foreach (var c in array)
             {
-                Console.WriteLine($"{i}");  
+                Console.WriteLine($"{c}");  
             }
 
-            var linqData = from arr in array where arr > 4 select arr;
+            var filteredData = from arr in array where arr > 4 select arr;
 
-            Console.WriteLine("linqData array");
-            foreach (var c in linqData)
+            Console.WriteLine("linqData array > 4");
+            foreach (var c in filteredData)
             {
                 Console.WriteLine($"{c}");
             }
@@ -32,7 +32,12 @@ class Program
             {
                 Console.WriteLine($"{c}");
             }
-
+            var sortedFilteredData = from arr in filteredData where arr > 4 orderby arr descending select arr;
+            Console.WriteLine("sortedFilteredData array > 4");
+            foreach (var c in sortedFilteredData)
+            {
+                Console.WriteLine($"{c}");
+            }
             //int[,] a = { { 1, 2 }, { 3, 4 } };
             //Console.WriteLine(a.Length);
 
