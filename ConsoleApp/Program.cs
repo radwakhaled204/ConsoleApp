@@ -11,10 +11,11 @@ class Program
         static void Main(string[] args)
         {
 
+
+
+
             //int[,] a = { { 1, 2 }, { 3, 4 } };
             //Console.WriteLine(a.Length);
-
-
 
             //int[,] c = new int[2, 3]
             //{
