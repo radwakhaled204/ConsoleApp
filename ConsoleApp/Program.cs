@@ -26,6 +26,12 @@ class Program
             {
                 Console.WriteLine($"{c}");
             }
+            var sortedData = from arr in array orderby arr descending select arr;
+            Console.WriteLine("sortedData array");
+            foreach (var c in sortedData)
+            {
+                Console.WriteLine($"{c}");
+            }
 
             //int[,] a = { { 1, 2 }, { 3, 4 } };
             //Console.WriteLine(a.Length);
