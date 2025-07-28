@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Metrics;
+using System.Numerics;
 using System.Xml.Linq;
 
 namespace ConsoleApp
@@ -9,28 +10,43 @@ class Program
     {
         static void Main(string[] args)
         {
-            int[] responses = { 1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 14 };
-             var frequency = new int[6];
-            foreach(var answer in responses)
+
+
+            int[,] c = new int[2, 3]
             {
-                try
+                { 1,2,3} , {2,8,9}
+            };
+            for (int row = 0; row < c.GetLength(0); row++) 
+            {
+                for (int col = 0; col < c.GetLength(1); col++) 
                 {
-                    ++frequency[responses[answer]];
+                    Console.Write(c[row, col] + "\t"); 
                 }
-                catch (IndexOutOfRangeException ex)
-                { 
-                    Console.WriteLine(ex.Message);
-                    Console.WriteLine($"responses[{answer}] = {responses[answer]}\n");
-                    
-                }
-
+                Console.WriteLine(); 
             }
 
-            Console.WriteLine($"{"Rating"}{"Frequency",10}");
-            for (var rating = 1; rating < frequency.Length; ++rating)
-            {
-                Console.WriteLine($"{rating,6}{frequency[rating],10}");
-            }
+            //int[] responses = { 1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 14 };
+            // var frequency = new int[6];
+            //foreach(var answer in responses)
+            //{
+            //    try
+            //    {
+            //        ++frequency[responses[answer]];
+            //    }
+            //    catch (IndexOutOfRangeException ex)
+            //    { 
+            //        Console.WriteLine(ex.Message);
+            //        Console.WriteLine($"responses[{answer}] = {responses[answer]}\n");
+
+            //    }
+
+            //}
+
+            //Console.WriteLine($"{"Rating"}{"Frequency",10}");
+            //for (var rating = 1; rating < frequency.Length; ++rating)
+            //{
+            //    Console.WriteLine($"{rating,6}{frequency[rating],10}");
+            //}
 
 
 
