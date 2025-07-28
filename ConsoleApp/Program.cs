@@ -34,7 +34,7 @@ class Program
             }
             var sortedFilteredData = from arr in filteredData where arr > 4 orderby arr descending select arr;
             Console.WriteLine("sortedFilteredData array > 4");
-            foreach (var c in sortedFilteredData)
+            foreach (var c in sortedFilteredData.Distinct())
             {
                 Console.WriteLine($"{c}");
             }
