@@ -11,7 +11,7 @@ class Program
         {
             int[] responses = { 1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 14 };
              var frequency = new int[6];
-            for(var answer = 0; answer < responses.Length; ++answer)
+            foreach(var answer in responses)
             {
                 try
                 {
