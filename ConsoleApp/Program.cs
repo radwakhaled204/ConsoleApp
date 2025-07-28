@@ -12,8 +12,12 @@ class Program
         {
 
 
-
-
+            int[] arr = new[] { 2, 9, 5, 0, 3, 7, 1, 4, 8, 5};
+            Console.WriteLine("original array" );
+            foreach (var i in arr)
+            {
+                Console.WriteLine($"{i}");  
+            }
             //int[,] a = { { 1, 2 }, { 3, 4 } };
             //Console.WriteLine(a.Length);
 
