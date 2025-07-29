@@ -12,18 +12,35 @@ class Program
         {
             var items = new List<string>();
             Console.WriteLine("Before adding to items: " +
-                $"Count = {items.Count}; Capacit= {items.Capacity}");
+                $"Count = {items.Count}; Capacity= {items.Capacity}");
             items.Add("red");
             items.Add("blue");
             items.Insert(0, "yellow");
+            items.Add("green");
+            items.Insert(2, "browen");
 
             foreach (var item in items)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine("Before adding to items: " +
-                $"Count = {items.Count}; Capacit= {items.Capacity}");
+                $"Count = {items.Count}; Capacity= {items.Capacity}");
 
+            items.Remove("browen");
+            foreach (var item in items)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("Before adding to items: " +
+    $"Count = {items.Count}; Capacity= {items.Capacity}");
+            items.RemoveAt(0);
+            foreach (var item in items)
+            {
+                Console.WriteLine(item);
+            }
+                        Console.WriteLine("Before adding to items: " +
+                $"Count = {items.Count}; Capacity= {items.Capacity}");
             // var employees = new[] {
             // new Employee("Jason", "Red", 5000M), 
             // new Employee("Ashley", "Green", 7600M), 
