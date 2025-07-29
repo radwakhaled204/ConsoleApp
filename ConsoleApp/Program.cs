@@ -19,28 +19,35 @@ class Program
             items.Add("green");
             items.Insert(2, "browen");
 
-            foreach (var item in items)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine("Before adding to items: " +
-                $"Count = {items.Count}; Capacity= {items.Capacity}");
 
-            items.Remove("browen");
-            foreach (var item in items)
+            var query = from item in items 
+                        let namesUpper = item.ToUpper() 
+                        where namesUpper.StartsWith("R") 
+                        orderby namesUpper select namesUpper;
+            Console.WriteLine("linq");
+            foreach (var item in query)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine();
+            //Console.WriteLine("Before adding to items: " +
+            //    $"Count = {items.Count}; Capacity= {items.Capacity}");
 
-            Console.WriteLine("Before adding to items: " +
-    $"Count = {items.Count}; Capacity= {items.Capacity}");
-            items.RemoveAt(0);
-            foreach (var item in items)
-            {
-                Console.WriteLine(item);
-            }
-                        Console.WriteLine("Before adding to items: " +
-                $"Count = {items.Count}; Capacity= {items.Capacity}");
+            //items.Remove("browen");
+            //foreach (var item in items)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine("Before adding to items: " +
+            //$"Count = {items.Count}; Capacity= {items.Capacity}");
+            //items.RemoveAt(0);
+            //foreach (var item in items)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //            Console.WriteLine("Before adding to items: " +
+            //    $"Count = {items.Count}; Capacity= {items.Capacity}");
             // var employees = new[] {
             // new Employee("Jason", "Red", 5000M), 
             // new Employee("Ashley", "Green", 7600M), 
