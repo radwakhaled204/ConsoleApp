@@ -21,8 +21,8 @@ class Program
 
 
             var query = from item in items 
-                        let namesUpper = item.ToUpper() 
-                        where namesUpper.StartsWith("R") 
+                        let namesUpper = item.ToLower() 
+                        where namesUpper.StartsWith("r") 
                         orderby namesUpper select namesUpper;
             Console.WriteLine("linq");
             foreach (var item in query)
