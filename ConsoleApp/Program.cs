@@ -10,28 +10,28 @@ class Program
     {
         static void Main(string[] args)
         {
-            var commissionEmployee = new CommissionEmployee(
-           "Essam", "Anwer", "285-74-1259", 10000.00M, .06M);
+           // var commissionEmployee = new CommissionEmployee(
+           //"Essam", "Anwer", "285-74-1259", 10000.00M, .06M);
 
            
-            var basePlusCommissionEmployee = new BasePlusCommissionEmployee(
-                "Radwa", "Khaled", "349-313-1782", 5000.00M, .04M, 300.00M);
+           // var basePlusCommissionEmployee = new BasePlusCommissionEmployee(
+           //     "Radwa", "Khaled", "349-313-1782", 5000.00M, .04M, 300.00M);
 
             
-            Console.WriteLine(
-                "Call CommissionEmployee's ToString and Earnings methods " +
-                "with base-class reference to base-class object\n");
+           // Console.WriteLine(
+           //     "Call CommissionEmployee's ToString and Earnings methods " +
+           //     "with base-class reference to base-class object\n");
 
-            Console.WriteLine(commissionEmployee.ToString());
-            Console.WriteLine($"earnings: {commissionEmployee.Earnings():C}\n");
+           // Console.WriteLine(commissionEmployee.ToString());
+           // Console.WriteLine($"earnings: {commissionEmployee.Earnings():C}\n");
 
             
-            Console.WriteLine(
-                "Call BasePlusCommissionEmployee's ToString and Earnings " +
-                "methods with derived-class reference to derived-class object\n");
+           // Console.WriteLine(
+           //     "Call BasePlusCommissionEmployee's ToString and Earnings " +
+           //     "methods with derived-class reference to derived-class object\n");
 
-            Console.WriteLine(basePlusCommissionEmployee.ToString());
-            Console.WriteLine($"earnings: {basePlusCommissionEmployee.Earnings():C}\n");
+           // Console.WriteLine(basePlusCommissionEmployee.ToString());
+           // Console.WriteLine($"earnings: {basePlusCommissionEmployee.Earnings():C}\n");
 
 
 
