@@ -41,7 +41,7 @@ namespace ConsoleApp
             }
         }
 
-        public override decimal Earnings() => baseSalary + (commissionRate * grossSales);
+        public override decimal Earnings() => BaseSalary + base.Earnings();
 
         public override string ToString() =>
                 $"base-salaried {base.ToString()}\nbase salary: {BaseSalary:C}";
