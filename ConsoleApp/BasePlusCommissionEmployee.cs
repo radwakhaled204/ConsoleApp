@@ -6,29 +6,30 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class BasePlusCommissionEmployee
+    class BasePlusCommissionEmployee : CommissionEmployee
     {
-        public string FirstName { get; }
-        public string LastName { get; }
-        public string SocialSecurityNumber { get; }
-        private decimal grossSales;
-        private decimal commissionRate;
+        //public string FirstName { get; }
+        //public string LastName { get; }
+        //public string SocialSecurityNumber { get; }
+        //private decimal grossSales;
+        //private decimal commissionRate;
         private decimal baseSalary;
         public BasePlusCommissionEmployee(string firstName, string lastName, string socialSecuirtyNumber,
-            decimal grossSales, decimal commissionRate , decimal baseSalary)
+            decimal grossSales, decimal commissionRate , decimal baseSalary) :base ( firstName,  lastName,  socialSecuirtyNumber,
+             grossSales,  commissionRate)
         {
                     
-            FirstName = firstName;
-            LastName = lastName;
-            SocialSecurityNumber = socialSecuirtyNumber;
-            GrossSales = grossSales;
-            CommissionRate = commissionRate;
+            //FirstName = firstName;
+            //LastName = lastName;
+            //SocialSecurityNumber = socialSecuirtyNumber;
+            //GrossSales = grossSales;
+            //CommissionRate = commissionRate;
             BaseSalary = baseSalary;
 
         }
 
-        public decimal GrossSales { get; set; }
-        public decimal CommissionRate { get; set; }
+        //public decimal GrossSales { get; set; }
+        //public decimal CommissionRate { get; set; }
         public decimal BaseSalary
         {
             get { return baseSalary; }
@@ -40,13 +41,9 @@ namespace ConsoleApp
             }
         }
 
-        public decimal Earnings() => baseSalary + (commissionRate * grossSales);
+        public override decimal Earnings() => baseSalary + (CommissionRate * GrossSales);
 
         public override string ToString() =>
-            $"base-salaried commission employee: {FirstName} {LastName}\n" +
-            $"social security number: {SocialSecurityNumber}\n" +
-            $"gross sales: {grossSales:C}\n" +
-            $"commission rate: {commissionRate:F2}\n" +
-            $"base salary: {baseSalary:C}";
+                $"base-salaried {base.ToString()}\nbase salary: {BaseSalary:C}";
     }
 }
