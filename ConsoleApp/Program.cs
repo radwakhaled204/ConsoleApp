@@ -4,34 +4,51 @@ using System.Diagnostics.Metrics;
 using System.Numerics;
 using System.Xml.Linq;
 using System.Linq;
+using System.Collections.Generic;
 namespace ConsoleApp
 {
 class Program
     {
         static void Main(string[] args)
         {
-           // var commissionEmployee = new CommissionEmployee(
-           //"Essam", "Anwer", "285-74-1259", 10000.00M, .06M);
 
-           
-           // var basePlusCommissionEmployee = new BasePlusCommissionEmployee(
-           //     "Radwa", "Khaled", "349-313-1782", 5000.00M, .04M, 300.00M);
+            List<IPayable> payableObjects = new List<IPayable>
+            {
+            new Invoice("01234", "seat", 2, 375.00M),
+            new Invoice("56789", "tire", 4, 79.95M),
+            new SalariedEmployee("John", "Smith", "111-11-1111", 800.00M),
+            new HourlyEmployee("Karen", "Price", "222-22-2222", 16.75M, 40.0M),
+            new CommissionEmployee("Sue", "Jones", "333-33-3333", 10000.00M, .06M),
+            new BasePlusCommissionEmployee("Bob", "Lewis", "444-44-4444", 5000.00M, .04M, 300.00M)
+            };
 
-            
-           // Console.WriteLine(
-           //     "Call CommissionEmployee's ToString and Earnings methods " +
-           //     "with base-class reference to base-class object\n");
+            foreach (var payable in payableObjects)
+            {
+                Console.WriteLine($"{payable}");
+                Console.WriteLine($"payment due: {payable.GetPaymentAmount():C}\n");
+            }
+            // var commissionEmployee = new CommissionEmployee(
+            //"Essam", "Anwer", "285-74-1259", 10000.00M, .06M);
 
-           // Console.WriteLine(commissionEmployee.ToString());
-           // Console.WriteLine($"earnings: {commissionEmployee.Earnings():C}\n");
 
-            
-           // Console.WriteLine(
-           //     "Call BasePlusCommissionEmployee's ToString and Earnings " +
-           //     "methods with derived-class reference to derived-class object\n");
+            // var basePlusCommissionEmployee = new BasePlusCommissionEmployee(
+            //     "Radwa", "Khaled", "349-313-1782", 5000.00M, .04M, 300.00M);
 
-           // Console.WriteLine(basePlusCommissionEmployee.ToString());
-           // Console.WriteLine($"earnings: {basePlusCommissionEmployee.Earnings():C}\n");
+
+            // Console.WriteLine(
+            //     "Call CommissionEmployee's ToString and Earnings methods " +
+            //     "with base-class reference to base-class object\n");
+
+            // Console.WriteLine(commissionEmployee.ToString());
+            // Console.WriteLine($"earnings: {commissionEmployee.Earnings():C}\n");
+
+
+            // Console.WriteLine(
+            //     "Call BasePlusCommissionEmployee's ToString and Earnings " +
+            //     "methods with derived-class reference to derived-class object\n");
+
+            // Console.WriteLine(basePlusCommissionEmployee.ToString());
+            // Console.WriteLine($"earnings: {basePlusCommissionEmployee.Earnings():C}\n");
 
 
 
