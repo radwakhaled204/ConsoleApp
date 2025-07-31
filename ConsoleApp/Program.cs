@@ -10,27 +10,46 @@ class Program
     {
         static void Main(string[] args)
         {
-            var items = new List<string>();
-            Console.WriteLine("Before adding to items: " +
-                $"Count = {items.Count}; Capacity= {items.Capacity}");
-            items.Add("red");
-            items.Add("blue");
-            items.Insert(0, "yellow");
-            items.Add("green");
-            items.Insert(2, "browen");
+
+            var employee = new CommissionEmployee("Radwa", "Khaled", "23-3030-420", 10000.00M, .05M);
+
+            Console.WriteLine("Employee information obtained by properties and methods:\n");
+            Console.WriteLine($"First name is {employee.FirstName}");
+            Console.WriteLine($"Last name is {employee.LastName}");
+            Console.WriteLine($"Social security number is {employee.SocialSecurityNumber}");
+            Console.WriteLine($"Gross sales are {employee.GrossSales:C}");
+            Console.WriteLine($"Commission rate is {employee.CommissionRate:F2}");
+            Console.WriteLine($"Earnings are {employee.Earnings():C}");
+
+            employee.GrossSales = 5000.00M;
+            employee.CommissionRate = .1M;
+
+            Console.WriteLine("\nUpdated employee information obtained by ToString:\n");
+            Console.WriteLine(employee);
+            Console.WriteLine($"earnings: {employee.Earnings():C}");
 
 
-            var query = from item in items 
-                        let namesUpper = item.ToLower() 
-                        where namesUpper.StartsWith("r") 
-                        orderby namesUpper select namesUpper;
+            //var items = new List<string>();
+            //Console.WriteLine("Before adding to items: " +
+            //    $"Count = {items.Count}; Capacity= {items.Capacity}");
+            //items.Add("red");
+            //items.Add("blue");
+            //items.Insert(0, "yellow");
+            //items.Add("green");
+            //items.Insert(2, "browen");
 
-            Console.WriteLine("linq");
-            foreach (var item in query)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine();
+
+            //var query = from item in items 
+            //            let namesUpper = item.ToLower() 
+            //            where namesUpper.StartsWith("r") 
+            //            orderby namesUpper select namesUpper;
+
+            //Console.WriteLine("linq");
+            //foreach (var item in query)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine();
             //Console.WriteLine("Before adding to items: " +
             //    $"Count = {items.Count}; Capacity= {items.Capacity}");
 
