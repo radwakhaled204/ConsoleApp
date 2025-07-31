@@ -13,7 +13,7 @@ namespace ConsoleApp
         public string SocialSecurityNumber {  get; }
         private decimal grossSales;
         private decimal commissionRate;
-        public CommissionEmployee(string firstName , string lastName , string socialSecuirtyNumber 
+        public CommissionEmployee(string firstName , string lastName , string socialSecuirtyNumber ,
             decimal grossSales, decimal commissionRate)
         {
             FirstName = firstName;
@@ -51,6 +51,10 @@ namespace ConsoleApp
             }
         }
         public decimal Earnings() => grossSales * commissionRate;
-
+        public override string ToString() => 
+            $"commission employee: {FirstName} {LastName}\n" 
+            + $"social security number: {SocialSecurityNumber}\n" 
+            + $"gross sales: {grossSales:C}\n" 
+            +$"commission rate: {commissionRate:F2}";
     }
 }
