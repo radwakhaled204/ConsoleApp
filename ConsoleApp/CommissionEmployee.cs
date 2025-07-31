@@ -50,6 +50,7 @@ namespace ConsoleApp
 
             }
         }
+        //make Earnings function virtual
         public virtual decimal Earnings() => grossSales * commissionRate;
         public override string ToString() => 
             $"commission employee: {FirstName} {LastName}\n" 
