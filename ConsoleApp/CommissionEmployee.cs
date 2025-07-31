@@ -11,8 +11,8 @@ namespace ConsoleApp
         public string FirstName { get; }
         public string LastName { get; } 
         public string SocialSecurityNumber {  get; }
-        private decimal grossSales;
-        private decimal commissionRate;
+        protected decimal grossSales;
+        protected decimal commissionRate;
         public CommissionEmployee(string firstName , string lastName , string socialSecuirtyNumber ,
             decimal grossSales, decimal commissionRate)
         {
