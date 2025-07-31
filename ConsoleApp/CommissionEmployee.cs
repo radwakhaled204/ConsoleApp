@@ -50,6 +50,7 @@ namespace ConsoleApp
 
             }
         }
+        public decimal Earnings() => grossSales * commissionRate;
 
     }
 }
