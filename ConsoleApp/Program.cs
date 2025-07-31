@@ -10,23 +10,47 @@ class Program
     {
         static void Main(string[] args)
         {
+            var commissionEmployee = new CommissionEmployee(
+           "Essam", "Anwer", "285-74-1259", 10000.00M, .06M);
 
-            var employee = new CommissionEmployee("Radwa", "Khaled", "23-3030-420", 10000.00M, .05M);
+           
+            var basePlusCommissionEmployee = new BasePlusCommissionEmployee(
+                "Radwa", "Khaled", "349-313-1782", 5000.00M, .04M, 300.00M);
 
-            Console.WriteLine("Employee information obtained by properties and methods:\n");
-            Console.WriteLine($"First name is {employee.FirstName}");
-            Console.WriteLine($"Last name is {employee.LastName}");
-            Console.WriteLine($"Social security number is {employee.SocialSecurityNumber}");
-            Console.WriteLine($"Gross sales are {employee.GrossSales:C}");
-            Console.WriteLine($"Commission rate is {employee.CommissionRate:F2}");
-            Console.WriteLine($"Earnings are {employee.Earnings():C}");
+            
+            Console.WriteLine(
+                "Call CommissionEmployee's ToString and Earnings methods " +
+                "with base-class reference to base-class object\n");
 
-            employee.GrossSales = 5000.00M;
-            employee.CommissionRate = .1M;
+            Console.WriteLine(commissionEmployee.ToString());
+            Console.WriteLine($"earnings: {commissionEmployee.Earnings():C}\n");
 
-            Console.WriteLine("\nUpdated employee information obtained by ToString:\n");
-            Console.WriteLine(employee);
-            Console.WriteLine($"earnings: {employee.Earnings():C}");
+            
+            Console.WriteLine(
+                "Call BasePlusCommissionEmployee's ToString and Earnings " +
+                "methods with derived-class reference to derived-class object\n");
+
+            Console.WriteLine(basePlusCommissionEmployee.ToString());
+            Console.WriteLine($"earnings: {basePlusCommissionEmployee.Earnings():C}\n");
+
+
+
+            //var employee = new CommissionEmployee("Radwa", "Khaled", "23-3030-420", 10000.00M, .05M);
+
+            //Console.WriteLine("Employee information obtained by properties and methods:\n");
+            //Console.WriteLine($"First name is {employee.FirstName}");
+            //Console.WriteLine($"Last name is {employee.LastName}");
+            //Console.WriteLine($"Social security number is {employee.SocialSecurityNumber}");
+            //Console.WriteLine($"Gross sales are {employee.GrossSales:C}");
+            //Console.WriteLine($"Commission rate is {employee.CommissionRate:F2}");
+            //Console.WriteLine($"Earnings are {employee.Earnings():C}");
+
+            //employee.GrossSales = 5000.00M;
+            //employee.CommissionRate = .1M;
+
+            //Console.WriteLine("\nUpdated employee information obtained by ToString:\n");
+            //Console.WriteLine(employee);
+            //Console.WriteLine($"earnings: {employee.Earnings():C}");
 
 
             //var items = new List<string>();
