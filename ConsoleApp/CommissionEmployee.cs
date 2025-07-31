@@ -50,7 +50,7 @@ namespace ConsoleApp
 
             }
         }
-        public decimal Earnings() => grossSales * commissionRate;
+        public virtual decimal Earnings() => grossSales * commissionRate;
         public override string ToString() => 
             $"commission employee: {FirstName} {LastName}\n" 
             + $"social security number: {SocialSecurityNumber}\n" 
