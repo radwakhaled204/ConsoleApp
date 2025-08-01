@@ -11,33 +11,62 @@ class Program
     {
         static void Main(string[] args)
         {
-            bool continueloop = true;
+           
+
+            bool continueLoop = true;
+
             do
             {
-                try
-                {
-                    Console.Write("Please enter an integer numerator: ");
-                    var numerator = int.Parse(Console.ReadLine());
+                Console.Write("Enter an integer numerator: ");
+                bool isNumeratorValid = int.TryParse(Console.ReadLine(), out int numerator);
 
-                    Console.Write("Please enter an integer denominator: ");
-                    var denominator = int.Parse(Console.ReadLine());
-                    var result = numerator / denominator;
+                Console.Write("Enter an integer denominator: ");
+                bool isDenominatorValid = int.TryParse(Console.ReadLine(), out int denominator);
 
-                    Console.WriteLine($"\nResult: {numerator} / {denominator} = {result}");
-                    continueloop = false;
-                }
-                catch (FormatException formatException)
+                if (!isNumeratorValid || !isDenominatorValid)
                 {
-                    Console.WriteLine($"\n{formatException.Message}");
-                    Console.WriteLine("You must enter two integers. Please try again.\n");
-                }
-                catch (DivideByZeroException divideByZeroException)
-                {
-                    Console.WriteLine($"\n{divideByZeroException.Message}");
-                    Console.WriteLine("Zero is an invalid denominator. Please try again.\n");
+                    Console.WriteLine("\n You must enter two valid integers. Please try again.\n");
+                    continue;
                 }
 
-            } while (continueloop);
+                if (denominator == 0)
+                {
+                    Console.WriteLine("\n Zero is an invalid denominator. Please try again.\n");
+                    continue;
+                }
+
+                int result = numerator / denominator;
+                Console.WriteLine($"\nResult: {numerator} / {denominator} = {result}");
+
+                continueLoop = false;
+
+            } while (continueLoop);
+            //do
+            //{
+            //    try
+            //    {
+            //        Console.Write("Please enter an integer numerator: ");
+            //        var numerator = int.TryParse(Console.ReadLine());
+
+            //        Console.Write("Please enter an integer denominator: ");
+            //        var denominator = int.TryParse(Console.ReadLine());
+            //        var result = numerator / denominator;
+
+            //        Console.WriteLine($"\nResult: {numerator} / {denominator} = {result}");
+            //        continueloop = false;
+            //    }
+            //    catch (FormatException formatException)
+            //    {
+            //        Console.WriteLine($"\n{formatException.Message}");
+            //        Console.WriteLine("You must enter two integers. Please try again.\n");
+            //    }
+            //    catch (DivideByZeroException divideByZeroException)
+            //    {
+            //        Console.WriteLine($"\n{divideByZeroException.Message}");
+            //        Console.WriteLine("Zero is an invalid denominator. Please try again.\n");
+            //    }
+
+            //} while (continueloop);
 
 
 
