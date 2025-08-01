@@ -11,6 +11,35 @@ class Program
     {
         static void Main(string[] args)
         {
+            bool continueloop = true;
+            do
+            {
+                try
+                {
+                    Console.Write("Please enter an integer numerator: ");
+                    var numerator = int.Parse(Console.ReadLine());
+
+                    Console.Write("Please enter an integer denominator: ");
+                    var denominator = int.Parse(Console.ReadLine());
+                    var result = numerator / denominator;
+
+                    Console.WriteLine($"\nResult: {numerator} / {denominator} = {result}");
+                    continueloop = false;
+                }
+                catch (FormatException formatException)
+                {
+                    Console.WriteLine($"\n{formatException.Message}");
+                    Console.WriteLine("You must enter two integers. Please try again.\n");
+                }
+                catch (DivideByZeroException divideByZeroException)
+                {
+                    Console.WriteLine($"\n{divideByZeroException.Message}");
+                    Console.WriteLine("Zero is an invalid denominator. Please try again.\n");
+                }
+
+            } while (continueloop);
+
+
 
             //List<IPayable> payableObjects = new List<IPayable>
             //{
