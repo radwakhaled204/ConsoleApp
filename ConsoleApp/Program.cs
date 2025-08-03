@@ -11,16 +11,23 @@ class Program
     {
         static void Main(string[] args)
         {
+            int sum =0  ;
            
+              for(int i = 1; i <= 5; i++)
+              {
+                Console.Write("Enter an integer : ");
+                sum += int.Parse(Console.ReadLine());  
+              }
 
-            int sum = 0;
-            int counter = 1;
-            while (counter <= 100)
-            {
-                sum = sum + counter;
-                counter++;
-            }
-            Console.WriteLine(sum);
+            Console.Write($"Avarege = {sum/5}");
+            //int sum = 0;
+            //int counter = 1;
+            //while (counter <= 100)
+            //{
+            //    sum = sum + counter;
+            //    counter++;
+            //}
+            //Console.WriteLine(sum);
 
             //bool continueLoop = true;
 
