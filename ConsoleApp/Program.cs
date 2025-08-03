@@ -13,14 +13,14 @@ class Program
         {
 
            
-            for (int i = 0; i<=20; i++)
-            {
+            //for (int i = 2; i<=20; i++)
+            //{
                
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
             //Console.Write("Enter an first num : ");
             //int input = int.Parse(Console.ReadLine());
             //int total = 0 ;
