@@ -11,19 +11,29 @@ class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter an first num : ");
-            int input = int.Parse(Console.ReadLine());
-            int total = 0 ;
-            int c = 0 ;
-            while (input != -1)
-            {
 
-                total += input ;
-                c++;
-                Console.Write("Enter another or -1 to quit : ");
-                input = int.Parse(Console.ReadLine());
+           
+            for (int i = 0; i<=20; i++)
+            {
+               
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
-            Console.WriteLine($"Avarege = {total / c }");
+            //Console.Write("Enter an first num : ");
+            //int input = int.Parse(Console.ReadLine());
+            //int total = 0 ;
+            //int c = 0 ;
+            //while (input != -1)
+            //{
+
+            //    total += input ;
+            //    c++;
+            //    Console.Write("Enter another or -1 to quit : ");
+            //    input = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine($"Avarege = {total / c }");
 
             //int input;
             //do
