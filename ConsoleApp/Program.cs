@@ -11,18 +11,31 @@ class Program
     {
         static void Main(string[] args)
         {
-            
-            int input;
-            do
+            Console.Write("Enter an first num : ");
+            int input = int.Parse(Console.ReadLine());
+            int total = 0 ;
+            int c = 0 ;
+            while (input != -1)
             {
-                Console.Write("Enter an integer : ");
+
+                total += input ;
+                c++;
+                Console.Write("Enter another or -1 to quit : ");
                 input = int.Parse(Console.ReadLine());
-            } while (input != 0);
+            }
+            Console.WriteLine($"Avarege = {total / c }");
+
+            //int input;
+            //do
+            //{
+            //    Console.Write("Enter an integer : ");
+            //    input = int.Parse(Console.ReadLine());
+            //} while (input != 0);
 
 
 
             //int sum =0  ;
-           
+
             //  for(int i = 1; i <= 5; i++)
             //  {
             //    Console.Write("Enter an integer : ");
