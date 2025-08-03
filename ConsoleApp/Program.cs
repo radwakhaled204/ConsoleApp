@@ -11,15 +11,25 @@ class Program
     {
         static void Main(string[] args)
         {
-            int sum =0  ;
-           
-              for(int i = 1; i <= 5; i++)
-              {
+            
+            int input;
+            do
+            {
                 Console.Write("Enter an integer : ");
-                sum += int.Parse(Console.ReadLine());  
-              }
+                input = int.Parse(Console.ReadLine());
+            } while (input != 0);
 
-            Console.Write($"Avarege = {sum/5}");
+
+
+            //int sum =0  ;
+           
+            //  for(int i = 1; i <= 5; i++)
+            //  {
+            //    Console.Write("Enter an integer : ");
+            //    sum += int.Parse(Console.ReadLine());  
+            //  }
+
+            //Console.Write($"Avarege = {sum/5}");
             //int sum = 0;
             //int counter = 1;
             //while (counter <= 100)
