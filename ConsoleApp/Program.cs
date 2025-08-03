@@ -13,34 +13,43 @@ class Program
         {
            
 
-            bool continueLoop = true;
-
-            do
+            int sum = 0;
+            int counter = 1;
+            while (counter <= 100)
             {
-                Console.Write("Enter an integer numerator: ");
-                bool isNumeratorValid = int.TryParse(Console.ReadLine(), out int numerator);
+                sum = sum + counter;
+                counter++;
+            }
+            Console.WriteLine(sum);
 
-                Console.Write("Enter an integer denominator: ");
-                bool isDenominatorValid = int.TryParse(Console.ReadLine(), out int denominator);
+            //bool continueLoop = true;
 
-                if (!isNumeratorValid || !isDenominatorValid)
-                {
-                    Console.WriteLine("\n You must enter two valid integers. Please try again.\n");
-                    continue;
-                }
+            //do
+            //{
+            //    Console.Write("Enter an integer numerator: ");
+            //    bool isNumeratorValid = int.TryParse(Console.ReadLine(), out int numerator);
 
-                if (denominator == 0)
-                {
-                    Console.WriteLine("\n Zero is an invalid denominator. Please try again.\n");
-                    continue;
-                }
+            //    Console.Write("Enter an integer denominator: ");
+            //    bool isDenominatorValid = int.TryParse(Console.ReadLine(), out int denominator);
 
-                int result = numerator / denominator;
-                Console.WriteLine($"\nResult: {numerator} / {denominator} = {result}");
+            //    if (!isNumeratorValid || !isDenominatorValid)
+            //    {
+            //        Console.WriteLine("\n You must enter two valid integers. Please try again.\n");
+            //        continue;
+            //    }
 
-                continueLoop = false;
+            //    if (denominator == 0)
+            //    {
+            //        Console.WriteLine("\n Zero is an invalid denominator. Please try again.\n");
+            //        continue;
+            //    }
 
-            } while (continueLoop);
+            //    int result = numerator / denominator;
+            //    Console.WriteLine($"\nResult: {numerator} / {denominator} = {result}");
+
+            //    continueLoop = false;
+
+            //} while (continueLoop);
             //do
             //{
             //    try
