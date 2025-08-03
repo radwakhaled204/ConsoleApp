@@ -11,20 +11,36 @@ class Program
     {
         static void Main(string[] args)
         {
-            int max = 0;
-            
-            for (int i = 1; i <= 3; i++)
+
+
+            for (int i = 1; i <= 5; i++)
             {
-                Console.Write("Enter number : ");
-                int input = int.Parse(Console.ReadLine());
-                if(input > max)
+                for (int j = 1; j <= 5; j++)
                 {
-                    max = input;
+                    Console.Write($"{i * j}\t ");
+
+                    Console.WriteLine();
                 }
 
             }
 
-            Console.Write($"max number is : {max}");
+
+
+
+            //int max = 0;
+
+            //for (int i = 1; i <= 3; i++)
+            //{
+            //    Console.Write("Enter number : ");
+            //    int input = int.Parse(Console.ReadLine());
+            //    if (input > max)
+            //    {
+            //        max = input;
+            //    }
+
+            //}
+
+            //Console.Write($"max number is : {max}");
 
 
             //for (int i = 2; i<=20; i++)
