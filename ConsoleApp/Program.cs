@@ -11,18 +11,50 @@ class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("enter number");
+            int numDay = int.Parse(Console.ReadLine()) ;
+            string day = "";
 
-
-            for (int i = 1; i <= 5; i++)
+            switch (numDay)
             {
-                for (int j = 1; j <= 5; j++)
-                {
-                    Console.Write($"{i * j}\t ");
+                case 1:
+                    Console.WriteLine($"{day = "saturday"}");
+                    
+                    break;
+                case 2:
+                    Console.WriteLine($"{day = "sunday"}");
 
-                    Console.WriteLine();
-                }
+                   
+                    break;
+                case 3:
+                    Console.WriteLine($"{day = "monday"}");
+
+                    
+                    break;
+                case 4:
+                    Console.WriteLine($"{day = "tuesday"}");
+
+                    
+                    break;
+               default:
+                    Console.WriteLine($"{day = "friday"}");
+
+                    
+                    break;
+
 
             }
+
+            //for (int i = 1; i <= 5; i++)
+            //{
+            //    for (int j = 1; j <= 5; j++)
+            //    {
+            //        Console.Write($"{i * j}\t ");
+
+            //        Console.WriteLine();
+            //    }
+
+            //}
 
 
 
