@@ -9,12 +9,30 @@ namespace ConsoleApp
 {
 class Program
     {
+        class Person
+        {
+            public string Name;
+        }
+
         static void Main(string[] args)
         {
-            int x = 5;
-            for (int i = 0; i < x; i++)
-                x--;
-            Console.WriteLine(x);
+
+        void Change(Person p)
+        {
+            p.Name = "Radwa";
+                Console.WriteLine(p.Name);
+            }
+
+        Person person = new Person();
+        person.Name = "Mona";
+        Change(person);
+        Console.WriteLine(person.Name);
+            
+
+            //int x = 5;
+            //for (int i = 0; i < x; i++)
+            //    x--;
+            //Console.WriteLine(x);
 
             //int numDay = 4;
             //string day = "";
@@ -493,7 +511,7 @@ class Program
 
         }
 
-    }
+}
 
 }
 
