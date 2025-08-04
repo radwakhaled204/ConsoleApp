@@ -11,8 +11,8 @@ class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter number");
-            int numDay = int.Parse(Console.ReadLine()) ;
+            
+            int numDay = 4;
             string day = "";
 
             switch (numDay)
@@ -28,15 +28,14 @@ class Program
                     break;
                 case 3:
                     Console.WriteLine($"{day = "monday"}");
-
-                    
                     break;
+
                 case 4:
                     Console.WriteLine($"{day = "tuesday"}");
-
-                    
                     break;
-               default:
+
+
+                default:
                     Console.WriteLine($"{day = "friday"}");
 
                     
