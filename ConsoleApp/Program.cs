@@ -9,25 +9,37 @@ namespace ConsoleApp
 {
 class Program
     {
-        class Person
-        {
-            public string Name;
-        }
+        //class Person
+        //{
+        //    public string Name;
+        //}
 
         static void Main(string[] args)
         {
 
-        void Change(Person p)
-        {
-            p.Name = "Radwa";
-                Console.WriteLine(p.Name);
-            }
+            //void Change(string s)
+            //{
+            //    s += " World";
+            //}
 
-        Person person = new Person();
-        person.Name = "Mona";
-        Change(person);
-        Console.WriteLine(person.Name);
-            
+            //string text = "Hello";
+            //Change(text);
+            //Console.WriteLine(text);
+
+
+
+            //string Change2(string s)
+            //{
+            //    s += " World";
+            //    return s;
+            //}
+
+            //string text2 = "Hello";
+            //text2 = Change2(text2);   
+            //Console.WriteLine(text2);
+
+
+
 
             //int x = 5;
             //for (int i = 0; i < x; i++)
