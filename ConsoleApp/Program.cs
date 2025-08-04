@@ -11,38 +11,42 @@ class Program
     {
         static void Main(string[] args)
         {
-            
-            int numDay = 4;
-            string day = "";
+            int x = 5;
+            for (int i = 0; i < x; i++)
+                x--;
+            Console.WriteLine(x);
 
-            switch (numDay)
-            {
-                case 1:
-                    Console.WriteLine($"{day = "saturday"}");
-                    
-                    break;
-                case 2:
-                    Console.WriteLine($"{day = "sunday"}");
+            //int numDay = 4;
+            //string day = "";
 
-                   
-                    break;
-                case 3:
-                    Console.WriteLine($"{day = "monday"}");
-                    break;
+            //switch (numDay)
+            //{
+            //    case 1:
+            //        Console.WriteLine($"{day = "saturday"}");
 
-                case 4:
-                    Console.WriteLine($"{day = "tuesday"}");
-                    break;
+            //        break;
+            //    case 2:
+            //        Console.WriteLine($"{day = "sunday"}");
 
 
-                default:
-                    Console.WriteLine($"{day = "friday"}");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine($"{day = "monday"}");
+            //        break;
 
-                    
-                    break;
+            //    case 4:
+            //        Console.WriteLine($"{day = "tuesday"}");
+            //        break;
 
 
-            }
+            //    default:
+            //        Console.WriteLine($"{day = "friday"}");
+
+
+            //        break;
+
+
+            //}
 
             //for (int i = 1; i <= 5; i++)
             //{
