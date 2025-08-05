@@ -16,17 +16,20 @@ class Program
 
         static void Main(string[] args)
         {
-            Stack<char> st = new Stack<char>(); 
-            st.Push('H');
-            st.Push('E');
-            st.Push('L');
-            st.Push('L');
-            st.Push('O');
+            string input = "Hello";
 
-            foreach (var s in st)
-            {
-                Console.WriteLine(s);
-            }
+            Stack<char> st = new Stack<char>();
+            foreach (char s in input)
+            
+                st.Push(s);
+            
+            while (st.Count > 0) 
+            Console.WriteLine(st.Pop());
+
+
+
+
+
 
             //int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
             //for (int i = 0; i < 3; i++)
@@ -543,7 +546,7 @@ class Program
 
         }
 
-        }
+    }
 
 }
 
