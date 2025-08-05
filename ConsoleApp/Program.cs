@@ -16,15 +16,23 @@ class Program
 
         static void Main(string[] args)
         {
-            string input = "Hello";
 
-            Stack<char> st = new Stack<char>();
-            foreach (char s in input)
-            
-                st.Push(s);
-            
-            while (st.Count > 0) 
-            Console.WriteLine(st.Pop());
+
+
+            Stack<string> stack = new Stack<string>();
+            stack.Push("A");
+            stack.Push("B");
+            Console.WriteLine(stack.Pop());
+
+            //string input = "Hello";
+
+            //Stack<char> st = new Stack<char>();
+            //foreach (char s in input)
+
+            //    st.Push(s);
+
+            //while (st.Count > 0) 
+            //Console.WriteLine(st.Pop());
 
 
 
