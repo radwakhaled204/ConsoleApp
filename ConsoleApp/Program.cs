@@ -19,13 +19,13 @@ class Program
         static void Main(string[] args)
         {
 
-            Product p1 = new Product();
-            p1.Name = "Test1";
+            //Product p1 = new Product();
+            //p1.Name = "Test1";
 
-            Product p2 = p1;
+            //Product p2 = p1;
 
-            Console.WriteLine(p1.Name);
-            Console.WriteLine(p2.Name);
+            //Console.WriteLine(p1.Name);
+            //Console.WriteLine(p2.Name);
 
             //int a = 8;
             //int b = 5;
