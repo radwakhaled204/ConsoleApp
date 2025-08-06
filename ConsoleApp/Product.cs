@@ -8,7 +8,7 @@ namespace ConsoleApp
 {
     class Product
     {
-
+        public  string Name { get; set; }
         public int product;
         public int num { get; set; }
 
