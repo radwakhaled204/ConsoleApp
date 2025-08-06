@@ -19,13 +19,21 @@ class Program
         static void Main(string[] args)
         {
 
-            int a = 8;
-            int b = 5;
-            Generics generics = new Generics();
+            Product p1 = new Product();
+            p1.Name = "Test1";
+
+            Product p2 = p1;
+
+            Console.WriteLine(p1.Name);
+            Console.WriteLine(p2.Name);
+
+            //int a = 8;
+            //int b = 5;
+            //Generics generics = new Generics();
 
 
-            
-            Console.WriteLine(generics.Max<int>(a, b));
+
+            //Console.WriteLine(generics.Max<int>(a, b));
 
 
             //Stack<string> stack = new Stack<string>();
@@ -563,7 +571,7 @@ class Program
 
         }
 
-}
+    }
 
 }
 
