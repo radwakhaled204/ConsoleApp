@@ -5,6 +5,8 @@ using System.Numerics;
 using System.Xml.Linq;
 using System.Linq;
 using System.Collections.Generic;
+using System.Data;
+using System.Collections;
 namespace ConsoleApp
 {
 class Program
@@ -17,12 +19,19 @@ class Program
         static void Main(string[] args)
         {
 
+            int a = 8;
+            int b = 5;
+            Generics generics = new Generics();
 
 
-            Stack<string> stack = new Stack<string>();
-            stack.Push("A");
-            stack.Push("B");
-            Console.WriteLine(stack.Pop());
+            
+            Console.WriteLine(generics.Max<int>(a, b));
+
+
+            //Stack<string> stack = new Stack<string>();
+            //stack.Push("A");
+            //stack.Push("B");
+            //Console.WriteLine(stack.Pop());
 
             //string input = "Hello";
 
@@ -554,7 +563,7 @@ class Program
 
         }
 
-    }
+}
 
 }
 
